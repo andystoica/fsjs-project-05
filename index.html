@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Movie Search</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="main-header">
+    <div class="inner">
+      <h1 class="main-title">MovieSearch</h1>
+      <form class="search-form">
+        <label class="is-hidden" for="search">Search a title</label>
+        <input type="search" name="search" id="search" placeholder="Search a Title...">
+
+        <!-- ==============================================================
+             Comment out <label> and <input> below to filter search by year
+             ============================================================== -->
+
+            <!-- 
+              <label class="is-hidden" for="year">Any Year</label>
+              <input type="text" maxlength="4" name="year" id="year" placeholder="Year"> 
+            -->
+
+        <button type="submit" id="submit" class="search-button"><i class="material-icons icn-search">search</i></button>
+      </form>   
+    </div>   
+  </div>
+
+  <div class="main-content clearfix">
+    <ul id="movies" class="movie-list">
+
+    <!-- ===============================================================
+      1- Example HTML you'll need to dynamically create with JavaScript. 
+         Each result should generate a '<li>'. 
+         Make sure you use the exact class names provided. 
+         =============================================================== -->
+
+        <!-- 
+          <li>
+            <div class="poster-wrap">
+              <img class="movie-poster" src="http://ia.media-imdb.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg">
+            </div>
+            <span class="movie-title">Batman</span>
+            <span class="movie-year">1989</span>
+          </li> 
+        -->
+
+
+    <!-- ================================================================
+      2- Display this placeholder icon if movie returns no movie poster. 
+         This icon should replace '<img class="movie-poster" src="">'. 
+         ================================================================ -->
+
+        <!-- <i class="material-icons poster-placeholder">crop_original</i> -->
+
+
+    <!-- ============================================================
+      3- Display this <li> if the search form returns no movie data
+         ============================================================ -->
+
+        <!-- 
+          <li class='no-movies'>
+            <i class='material-icons icon-help'>help_outline</i>No movies found that match: [search form value].
+          </li> 
+        -->
+
+    </ul> 
+  </div>
+
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
