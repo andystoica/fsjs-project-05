@@ -1,0 +1,161 @@
+.movie-details {
+  position: absolute;
+  top: 130px;
+  left: 0px;
+  width: 100%;
+  min-height: calc(100vh - 130px);
+  padding: 0 10% 25px;
+  display: flex;
+  z-index: 3000;
+  background: #fff;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: #4c4c4c;
+  }
+
+  .movie-load {
+    z-index: 3000;
+    padding-top: 45px;
+
+    h2 {
+      font-size: 1.4em;
+      color: #999;
+      font-weight: lighter;
+    }
+  }
+
+  .movie-close {
+    z-index: 3000;
+    flex: 1 100%;
+    color: white;
+    text-align: center;
+    margin: 1.5rem 0 1rem;
+    a {
+      color: #bbb;
+      background: url('../img/prev-arrow.svg') left center no-repeat;
+      background-size: 16px;
+      padding-left: 24px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .movie-poster {
+    flex: 1 auto;
+    max-width: 175px;
+    margin-bottom: 2rem;
+    z-index: 3000;
+    img {
+      max-width: 100%;
+      border: 10px solid #f8f8f8;
+      box-shadow: 2px 2px 10px 0px rgba(0,0,0,.15);
+    }
+  }
+
+  .movie-info {
+    z-index: 500;
+    flex: 1 100%;
+    text-align: center;
+
+    h2 {
+      color: #333;
+      font-weight: lighter;
+      font-size: 1.5rem;
+      margin: 0;
+      a {
+        color: #333;
+      }
+    }
+
+    h3 {
+      color: #aaa;
+      font-size: 1rem;
+      font-weight: lighter;
+      line-height: 1.5;
+      margin-top: 0;
+    }
+
+    h4 {
+      line-height: 1.5;
+    }
+
+    p {
+      color: #666;
+    }
+
+    .movie-imdb-link {
+      margin-top: 15px;
+      display: inline-block;
+      border-radius: 3px;
+      padding: 10px 15px;
+      font-size: 1em;
+      color: #fff;
+      background: #37d6b2;
+      transition: background-color, .3s;
+      &:hover {
+        background-color: #4c4c4c;
+      }
+    }
+  }
+
+
+
+  @media (min-width: 769px) {
+    top: 80px;
+    left: 0;
+    min-height: calc(100vh - 80px);
+
+    &::before {
+      height: 200px;
+    }
+
+    .movie-load {
+      padding-top: 65px;
+    }
+
+    .movie-close {
+      text-align: left;
+      margin-top: 25px;
+    }
+
+    .movie-poster {
+      display: block;
+      flex: 1 35%;
+      max-width: 100%;
+      margin-right: 5%;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .movie-info {
+      flex: 1 60%;
+      text-align: left;
+      h2 {
+        font-size: 1.8em;
+        margin-top: 25px;
+        a {
+          color: #fff;
+        }
+      }
+      h4 {
+        margin-top: 75px;
+      }
+    }
+
+  }
+
+}
