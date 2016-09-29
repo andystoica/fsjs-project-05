@@ -11,7 +11,7 @@
 
 
 // Module variable declaration
-var api = 'http://www.omdbapi.com'; // OMDb API
+var api = 'https://www.omdbapi.com'; // OMDb API
 
 /**
  * ------------------------------------------------------------------------
